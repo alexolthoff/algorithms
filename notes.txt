@@ -1,0 +1,3 @@
+Strategies For Good Coding:
+
+Use hash tables to store data
