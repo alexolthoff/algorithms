@@ -1,18 +1,12 @@
 const reverseWord = (string) => {
     let wordArray = []
-    let firstWordArray = string.toLowerCase().split(' ')
-    firstWordArrayFiltered = firstWordArray.filter( (word) => word !== ' ' )
-    firstWordArrayFiltered.forEach( (word) => {
-        if (word !== ' ') {
-        const localWordArray = word.split('')
-        let localReversedArray = []
-        let counter = localWordArray.length - 1
-        while (counter > -1) {
-            localReversedArray.push(localWordArray[counter]) 
-            counter--
+    const firstWordArray = string.toLowerCase().split(' ')
+    firstWordArray.forEach(word => {
+        let reversedWord = ''
+        for (let i = word.length - 1; i >= 0; i--){
+            reversedWord += word[i]
         }
-        wordArray.push(localReversedArray.join(''))
-        }
+        wordArray.push(reversedWord)
     })
         // console.log(wordArray)
         return wordArray.join(' ')
